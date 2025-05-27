@@ -1,10 +1,17 @@
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './App.css'
-import AppRoutes from './routes/AppRoutes'
+import Cadastro from './pages/Cadastro'
+import LoginCard from './pages/login'
 
 function App() {
   return (
     <>
-     <AppRoutes />
+     <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<LoginCard />} />
+          <Route path="/cadastro" element={<Cadastro />} />
+        </Routes>
+      </BrowserRouter>
     </>
   )
 }
