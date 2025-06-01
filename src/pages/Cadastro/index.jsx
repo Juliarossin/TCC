@@ -1,4 +1,6 @@
-import { useState } from "react";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
 
 export default function Cadastro() {
   const [formData, setFormData] = useState({
@@ -109,10 +111,9 @@ export default function Cadastro() {
            
           <p className="mt-4 text-center text-sm">
             Já tem uma conta?{' '}
-            <a href="/login" className="text-blue-600 hover:underline">
-              
+            <Link to="/" className="text-blue-600 hover:underline">
               Faça login
-            </a>
+            </Link>
           </p>
    
         </div>
